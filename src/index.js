@@ -9,7 +9,8 @@ import * as serviceWorker from './serviceWorker';
 
 console.log(navigator.language)
 const locale = navigator.language;
-if (locale === "es-ES") {
+console.log(locale)
+if (locale.includes("es")) {
   
 
 	fetch("https://gist.githubusercontent.com/josejbocanegra/f784b189117d214578ac2358eb0a01d7/raw/2b22960c3f203bdf4fac44cc7e3849689218b8c0/data-es.json")
