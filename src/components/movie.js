@@ -2,9 +2,15 @@ import React from 'react';
 import { FormattedDate } from 'react-intl';
 import { FormattedNumber } from 'react-intl';
 export default class Movie extends React.Component {
+    update =() =>{
+        this.props.movieSelected(this.props.movie.poster,
+            this.props.movie.name,
+            this.props.movie.description,
+            this.props.movie.cast)
+    }
     render() {
         return (
-            <tr>
+            <tr onClick={(this.update)}>
                 <th scope="row">{this.props.movie.id}</th>
                 <td>{this.props.movie.name}</td>
                 <td>{this.props.movie.directedBy}</td>
